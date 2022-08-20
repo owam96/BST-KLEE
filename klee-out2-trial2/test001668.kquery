@@ -1,0 +1,50 @@
+array model_version[4] : w32 -> w8 = symbolic
+array sym_arr[40] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Slt 31
+              N0:(ReadLSB w32 0 sym_arr))
+         (Slt N0 127)
+         (Slt 31
+              N1:(ReadLSB w32 4 sym_arr))
+         (Slt N1 127)
+         (Slt 31
+              N2:(ReadLSB w32 8 sym_arr))
+         (Slt N2 127)
+         (Slt 31
+              N3:(ReadLSB w32 12 sym_arr))
+         (Slt N3 127)
+         (Slt 31
+              N4:(ReadLSB w32 16 sym_arr))
+         (Slt N4 127)
+         (Slt 31
+              N5:(ReadLSB w32 20 sym_arr))
+         (Slt N5 127)
+         (Slt 31
+              N6:(ReadLSB w32 24 sym_arr))
+         (Slt N6 127)
+         (Slt 31
+              N7:(ReadLSB w32 28 sym_arr))
+         (Slt N7 127)
+         (Slt 31
+              N8:(ReadLSB w32 32 sym_arr))
+         (Slt N8 127)
+         (Slt 31
+              N9:(ReadLSB w32 36 sym_arr))
+         (Slt N9 127)
+         (Eq false (Slt N1 N0))
+         (Eq false (Slt N2 N0))
+         (Eq false (Slt N2 N1))
+         (Slt N3 N0)
+         (Eq false (Slt N4 N0))
+         (Slt N4 N1)
+         (Eq false (Slt N5 N0))
+         (Eq false (Slt N5 N1))
+         (Eq false (Slt N5 N2))
+         (Eq false (Slt N6 N0))
+         (Eq false (Slt N6 N1))
+         (Eq false (Slt N6 N2))
+         (Slt N6 N5)
+         (Slt N7 N0)
+         (Slt N7 N3)]
+        false)

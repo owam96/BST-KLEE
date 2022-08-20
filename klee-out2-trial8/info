@@ -1,0 +1,23 @@
+klee --libc=uclibc -posix-runtime project2_trial8.bc
+PID: 5413
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2022-08-03 20:13:07
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2022-08-03 20:22:12
+Elapsed: 00:09:05
+KLEE: done: explored paths = 9366
+KLEE: done: avg. constructs per query = 374
+KLEE: done: total queries = 10097
+KLEE: done: valid queries = 601
+KLEE: done: invalid queries = 9496
+KLEE: done: query cex = 10097
+
+KLEE: done: total instructions = 24524999
+KLEE: done: completed paths = 5403
+KLEE: done: partially completed paths = 3963
+KLEE: done: generated tests = 5404

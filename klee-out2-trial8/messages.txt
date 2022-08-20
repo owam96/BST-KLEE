@@ -1,0 +1,3 @@
+KLEE: Using STP solver backend
+KLEE: ERROR: project2_trial8.c:228: ASSERTION FAIL: treeSearch(main_tree, symbolic_array[i]) == -1
+KLEE: NOTE: now ignoring this error at this location

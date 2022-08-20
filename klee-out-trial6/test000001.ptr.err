@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: project_trial6.c
+Line: 90
+assembly.ll line: 10004
+State: 2
+Stack: 
+	#000010004 in treeDeleteNode(94546112913280, 94546112977248) at project_trial6.c:90
+	#100010275 in __klee_posix_wrapped_main() at project_trial6.c:162
+	#200007345 in __user_main(1, 94546081119744, 94546081119760) at runtime/POSIX/klee_init_env.c:245
+	#300000589 in __uClibc_main(94546112312752, 1, 94546081119744, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#400000754 in main(1, 94546081119744)
+Info: 
+	address: 94546112977264
+	next: object at 94546080865856 of size 167
+		MO52[167] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* @__user_main, i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

@@ -1,0 +1,3 @@
+KLEE: Using STP solver backend
+KLEE: ERROR: project2_trial4.c:267: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

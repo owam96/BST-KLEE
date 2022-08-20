@@ -1,0 +1,10 @@
+Error: ASSERTION FAIL: treeSearch(main_tree, symbolic_array[i]) != -1
+File: project2_trial7.c
+Line: 221
+assembly.ll line: 10610
+State: 7182
+Stack: 
+	#000010610 in __klee_posix_wrapped_main() at project2_trial7.c:221
+	#100007353 in __user_main(1, 93934524762624, 93934524762640) at runtime/POSIX/klee_init_env.c:245
+	#200000597 in __uClibc_main(93934554234408, 1, 93934524762624, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#300000762 in main(1, 93934524762624)

@@ -1,0 +1,1 @@
+in the creation of a new node, the struct member pointers were not initialized to zero. This issue seemed to not matter when run on input outside klee

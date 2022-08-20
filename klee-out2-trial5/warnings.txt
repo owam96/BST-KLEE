@@ -1,0 +1,7 @@
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 94388452342624) at runtime/POSIX/fd.c:1012 10
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: calling __klee_posix_wrapped_main with extra arguments.
+KLEE: WARNING ONCE: calling external: vprintf(94388451990128, 94388452399488) at libc/stdio/fprintf.c:35 14
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
+KLEE: WARNING: killing 3217 states (over memory cap: 2101MB)

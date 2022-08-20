@@ -1,0 +1,29 @@
+array arrKeys[40] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Ult N0:(ReadLSB w32 4 arrKeys)
+              N1:(ReadLSB w32 0 arrKeys))
+         (Eq false
+             (Ult (ReadLSB w32 8 arrKeys)
+                  N1))
+         (Ult N2:(ReadLSB w32 12 arrKeys)
+              N1)
+         (Eq false (Ult N2 N0))
+         (Ult N3:(ReadLSB w32 16 arrKeys)
+              N1)
+         (Ult N3 N0)
+         (Ult N4:(ReadLSB w32 20 arrKeys)
+              N1)
+         (Eq false (Ult N4 N0))
+         (Eq false (Ult N4 N2))
+         (Ult N5:(ReadLSB w32 24 arrKeys)
+              N1)
+         (Eq false (Ult N5 N0))
+         (Ult N5 N2)
+         (Ult N6:(ReadLSB w32 28 arrKeys)
+              N1)
+         (Eq false (Ult N6 N0))
+         (Ult N6 N2)
+         (Eq false (Ult N6 N5))]
+        false)
